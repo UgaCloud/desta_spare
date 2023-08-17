@@ -9,7 +9,7 @@
             <a href="{% url 'expense:add_new_expense' %}"><button type="button" id="expense" class="btn btn-primary" id="load" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i>Processing">Create Expense</button></a>
             <br><br>
             <div class="content-panel table-responsive">
-                <h2 class="text-center">Garage Expenses</h2><div class="input-group custom-search-form col-md-4" style="left: 5px">
+                <h2 class="text-center">Orders</h2><div class="input-group custom-search-form col-md-4" style="left: 5px">
                 <input type="text" class="form-control search-order" placeholder="Search...">
                 <span class="input-group-btn">
                         <button class="btn btn-default" type="button">
@@ -22,24 +22,22 @@
                     <thead>
                     <tr>
                         <th class="text-center"><i class="fa fa-gavel"></i> S.No</th>
-                        <th class="text-center"><i class="fa fa-gavel"></i> expense Type</th>
                         <th class="text-center"><i class="fa fa-gavel"></i> expense Amont</th>
                         <th class="text-center"><i class="fa fa-bullhorn"></i> Description</th>
                         <th class="text-center"><i class=" fa fa-edit"></i> Date</th>
-                        <!-- <th class="text-center">Actions</th> -->
+                        <th class="text-center">Actions</th>
                     </tr>
                     </thead>
                     <tbody class="order-table-body text-center">
                     {% for expense in object_list %}
                     <tr>
                         <td>{{ forloop.counter }}</td>
-                        <td>{{ expense.expense_type }}</td>
                         <td>{{ expense.amount }}</td>
                         <td>{{ expense.description }}</td>
                         <td>{{ expense.date }}</td>
-                        <!-- <td>
+                        <td>
                             <a href="{% url 'expense:delete_expense' pk=expense.id %}"><button class="btn btn-danger btn-xs"><i class="fa  fa-trash-o"></i></button></a>
-                        </td> -->
+                        </td>
                     </tr>
                     {% endfor %}
                     </tbody>

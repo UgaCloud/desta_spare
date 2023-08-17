@@ -118,7 +118,7 @@
         </div>
         {% endif %}
         <!--add employees div -->
-        {% if request.user.retailer_user.role_type == request.user.retailer_user.ROLE_TYPE_SALESMAN or request.user.retailer_user.role_type == request.user.retailer_user.ROLE_TYPE_OWNER %}
+        {% if request.user.retailer_user.role_type == request.user.retailer_user.ROLE_TYPE_SALESMAN or request.user.retailer_user.role_type == request.user.retailer_user.ROLE_TYPE_OWNER or request.user.retailer_user.role_type == request.user.retailer_user.ROLE_TYPE_VIEW_ACCOUNT %}
         <div class="col-lg-4 col-md-6 ">
             <a href="{% url 'employee:employee_list' %}">
                 <div class="panel panel_bg_color">
@@ -164,7 +164,7 @@
         </div>
         {% endif %}
         <!--add reports div -->
-        <!-- <div class="col-lg-4 col-md-6 ">
+        <div class="col-lg-4 col-md-6 ">
             <a href="{% url 'reports' %}">
                 <div class="panel panel_bg_color">
                     <div class="panel-heading">
@@ -183,9 +183,9 @@
                     </div>
                 </div>
             </a>
-        </div> -->
+        </div>
         <!--add logs div -->
-        <!-- <div class="col-lg-4 col-md-6 ">
+        <div class="col-lg-4 col-md-6 ">
             <a href="{% url 'product:daily_stock_logs' %}">
                 <div class="panel panel_bg_color">
                     <div class="panel-heading">
@@ -204,7 +204,7 @@
                     </div>
                 </div>
             </a>
-        </div> -->
+        </div>
 <!--col-div end here--->
     </div>
 </div>

@@ -25,7 +25,7 @@ SECRET_KEY = '2j-tes@g+5%*wg!^o8h49br$0^$y7=)ai32vi3&sey2r0j209_'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['store.desta-auto.com','*']
+ALLOWED_HOSTS = ['spare.desta-auto.com','*']
 
 
 # Application definition
@@ -85,7 +85,7 @@ DATABASES = {
     'default': {
 
 
-        # 'ENGINE': 'django.db.backends.mysql',
+        # 'ENGINE': 'mysql.connector.django',
         # 'NAME': 'awakzfip_desta',
         # 'USER': 'awakzfip_desta_user',
         # 'PASSWORD': 'jamir1.022',
@@ -99,20 +99,13 @@ DATABASES = {
         # 'PORT':'5432'
         # 'ENGINE': 'django.db.backends.sqlite3',
         # 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-
         
-        # 'ENGINE': 'django.db.backends.mysql',
-        
-        # 'NAME': 'desta_store',
-        # 'USER': 'root',
-        # 'PASSWORD': '',
-        # 'HOST': 'localhost',
-        # 'PORT': '3306',
-        # 'OPTIONS': {
-        #     'sql_mode': 'traditional',
-        # }
-       'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': str(os.path.join(BASE_DIR, "db.sqlite3")),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'awakzfip_desta_spare',
+        'USER': 'awakzfip_desta_spare_user',
+        'PASSWORD': 'jamir11989',
+        'HOST': 'localhost',
+        'PORT': '3306',
     
     }
 }
@@ -157,12 +150,11 @@ STATIC_URL = '/app_static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "app_static")
-    # '/var/www/static/',
+    os.path.join(BASE_DIR, "app_static"),
+    '/var/www/static/',
 ]
 
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media_root/')
-DEFAULT_AUTO_FIELD='django.db.models.AutoField'
 
