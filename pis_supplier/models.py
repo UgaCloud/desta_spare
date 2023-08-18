@@ -37,7 +37,7 @@ class SupplierStatement(models.Model):
         max_digits=30, decimal_places=2, null=True, blank=True, default=0)
     payment_amount = models.DecimalField(
         max_digits=30, decimal_places=2, null=True, blank=True, default=0)
-    description = models.TextField(max_length=500, null=True, blank=True)
+    description = models.TextField(max_length=65, null=True, blank=True)
     date = models.DateField(null=True, blank=True)
 
     def __unicode__(self):
