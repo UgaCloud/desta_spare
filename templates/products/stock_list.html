@@ -33,7 +33,7 @@
                     <tbody class="product-table-body text-center">
                     {% for item in object_list %}
                         <tr>
-                            <td><a href="{% url 'product:item_details' pk=item.id %}">{{ item.name}}</a></td>
+                            <td>{{ item.name}}</td>
                             <td class="#">{{ item.brand_name }}</td>
                             <td class="#">{{ item.unit_type }}</td>
                             <td>{{ item.total_items|floatformat:-2 }}</td>
@@ -43,7 +43,7 @@
                             <td>
                                 <a href="{% url 'product:update_product' pk=item.id %}"><button class="btn btn-success btn-xs"><i class="fa fa-edit"></i></button></a>
                                 <a href="{% url 'product:stockin_list' product_id=item.id %}"><button class="btn btn-primary btn-xs"><i class="fa fa-plus"></i></button></a>
-                                <a href="{% url 'product:stockout_list' product_id=item.id %}"><button class="btn btn-danger btn-xs" title="Stock Out"><i class="fa fa-minus"></i></button></a>
+                                <!-- <a href="{% url 'product:stockout_list' product_id=item.id %}"><button class="btn btn-danger btn-xs" title="Stock Out"><i class="fa fa-minus"></i></button></a> -->
                             </td>
                         </tr>
                     {% endfor %}

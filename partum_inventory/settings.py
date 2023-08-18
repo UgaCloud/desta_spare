@@ -19,13 +19,13 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
+#g SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = '2j-tes@g+5%*wg!^o8h49br$0^$y7=)ai32vi3&sey2r0j209_'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['spare.desta-auto.com']
+ALLOWED_HOSTS = ['store.desta-auto.com','*']
 
 
 # Application definition
@@ -83,16 +83,31 @@ WSGI_APPLICATION = 'partum_inventory.wsgi.application'
 
 DATABASES = {
     'default': {
+
+
+        # 'ENGINE': 'mysql.connector.django',
+        # 'NAME': 'awakzfip_desta',
+        # 'USER': 'awakzfip_desta_user',
+        # 'PASSWORD': 'jamir1.022',
+        # 'HOST': 'localhost',
+        # 'PORT': '3306',
+        # 'ENGINE': 'django.db.backends.postgresql',
+        # 'NAME': 'desta_db_1',
+        # 'USER':'desta_user',
+        # 'PASSWORD':'jamir1.022',
+        # 'HOST':'database-2.cn1e4u5sqphf.us-east-1.rds.amazonaws.com',
+        # 'PORT':'5432'
         # 'ENGINE': 'django.db.backends.sqlite3',
         # 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-        'ENGINE': 'django.db.backends.mysql',
+        
+       'ENGINE': 'django.db.backends.mysql',
         'NAME': 'awakzfip_desta_spare',
         'USER': 'awakzfip_desta_spare_user',
         'PASSWORD': 'jamir11989',
         'HOST': 'localhost',
         'PORT': '3306',
-    }
     
+    }
 }
 
 
@@ -113,7 +128,7 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
-DEFAULT_AUTO_FIELD='django.db.models.AutoField'
+
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.0/topics/i18n/
@@ -126,7 +141,7 @@ USE_I18N = True
 
 USE_L10N = True
 
-USE_TZ = True
+USE_TZ = False
 
 
 # Static files (CSS, JavaScript, Images)
