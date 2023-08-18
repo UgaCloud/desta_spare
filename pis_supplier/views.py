@@ -23,13 +23,10 @@ class AddSupplier(FormView):
             AddSupplier, self).dispatch(request, *args, **kwargs)
 
     def form_valid(self, form):
-        try:
-          obj = form.save(commit=False)
-          obj.save()
+        obj = form.save(commit=False)
+        obj.save()
 
-          return HttpResponseRedirect(reverse('supplier:list_supplier'))
-        except:
-            print()
+        return HttpResponseRedirect(reverse('supplier:list_supplier'))
 
     def form_invalid(self, form):
         return super(AddSupplier, self).form_invalid(form)
