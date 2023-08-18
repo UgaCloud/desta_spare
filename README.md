@@ -1,4 +1,4 @@
-# Inventory Management Systems #
+# Inventory Management System #
 
 Inventory Management System is a web based Application developed in Python/Django. The Software is designed for the small business to maintain there records, customer ledger, sales and etc.<br>
 <br>Designed by <a href="partumsolutions.com">Partum Solutions</a> (New Startup in Quetta, Pakistan. Provides Services and Solutions).
